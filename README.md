@@ -1,1 +1,3 @@
 # scriptingtests
+
+This repo will host some of the scripting dabbling I have just started ... 
