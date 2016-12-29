@@ -13,4 +13,8 @@ x = json.loads(r.text)
 totResults = len(x['body']['stores'])
 
 for i in range(0,totResults):
-    print 'For store: ' + x['body']['stores'][i]['storeName'] + ' -- ' + x['body']['stores'][i]['partsAvailability']['MMEF2AM/A']['pickupSearchQuote']
+    storename = x['body']['stores'][i]['storeName']
+    storeavail = x['body']['stores'][i]['partsAvailability']['MMEF2AM/A']['pickupSearchQuote']
+    storeavail = storeavail.replace("<br/>", " ")
+    #print 'For store: ' + x['body']['stores'][i]['storeName'] + ' -- ' + x['body']['stores'][i]['partsAvailability']['MMEF2AM/A']['pickupSearchQuote']
+    print 'For store: ' + storename + ' -- ' + storeavail
